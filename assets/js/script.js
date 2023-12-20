@@ -1,25 +1,5 @@
 
-// Isotop Image filter code Starts here
 
-$(document).ready(function () {
-  // Initialize Isotope
-  var $container = $('#product-container').isotope({
-    itemSelector: '.product-img-item',
-    layoutMode: 'fitRows'
-  });
-
-  // Filter items on button click
-  $('.product-catagories a').on('click', function (e) {
-    e.preventDefault();
-    var filterValue = $(this).attr('data-filter');
-    $container.isotope({ filter: filterValue });
-  });
-
-  // Add active class to the current button (highlight it)
-  $('.product-catagories a').on('click', function () {
-    $(this).addClass('active').siblings().removeClass('active');
-  });
-});
 
 // SWIPER FOR TESTIMONIAL SLIDE CODE STARTS HERE
 var swiper = new Swiper(".mySwiper", {
@@ -43,12 +23,16 @@ var swiper = new Swiper(".mySwiper", {
     // when window width is >= 480px
     480: {
       slidesPerView: 1,
-      spaceBetween: 10
+      spaceBetween: 10,
     },
     // when window width is >= 768px
     768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1320: {
       slidesPerView: 3,
-      spaceBetween: 30
+      spaceBetween: 30,
     }
   }
 
